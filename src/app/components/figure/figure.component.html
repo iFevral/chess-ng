@@ -1,0 +1,3 @@
+<div *ngIf="figure" class="figure" [ngClass]='getFigureTypeClassName()' cdkDrag cdkDragBoundary=".board" [cdkDragDisabled]="figure?.color !== currentColor"><div *cdkDragPlaceholder class="figure-placeholder"></div></div>
+
+ 

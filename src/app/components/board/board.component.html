@@ -1,0 +1,14 @@
+<section class="board" cdkDropListGroup>
+	<div class="board-cell" 
+		*ngFor='let item of boardService.board; let i = index' 
+		[ngClass]="{'alter-color': setCellColor(i)}" 
+		cdkDropList 
+		(cdkDropListDropped)="drop($event)"  
+		[cdkDropListData]="item">
+				
+		<div *ngIf="i % 8 == 0" class="row-num">{{9 - (i / 8 + 1)}}</div>
+		<div *ngIf="i > 55" class="col-num">{{['a','b','c','d','e','f','g','h'][i%8]}}</div>
+		
+		<app-figure [figure]="item[0]" [currentColor]="currentColor"></app-figure>
+	</div>
+</section>

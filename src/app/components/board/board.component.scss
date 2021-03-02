@@ -1,0 +1,41 @@
+section.board {
+	margin: 50px 0 0 50px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 40vw;
+	height: 40vw;
+
+	.board-cell {
+		width: 12.5%;
+		height: 12.5%;
+		background: #eeeed2;
+		position: relative;
+		
+		.row-num {
+			position: absolute;
+			color: #769656;
+			user-select: none;
+		}
+		
+		.col-num {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			color: #769656;
+			user-select: none;
+		}
+
+		&.alter-color {
+			background: #769656;
+			
+			.row-num {
+				color: #eeeed2;
+			}
+			
+			.col-num {
+				color: #eeeed2;
+			}
+		}
+	}
+}
+
